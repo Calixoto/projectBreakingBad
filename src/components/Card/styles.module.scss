@@ -1,0 +1,39 @@
+.cardContainer {
+    border: 1px solid red;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 336px;
+    border-radius: 1rem;
+    background: #C4C4C4;
+
+    img {
+        border-radius: 1rem 1rem 0 0;
+        height: 480px; 
+    }
+
+        margin-top: 12px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid blue;
+
+        h3 {
+            font-size: 36px;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+    
+        h4 {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+    
+        a {
+            font-size: 24px;
+            font-weight: 500;
+            color: blue;
+        }
+}
