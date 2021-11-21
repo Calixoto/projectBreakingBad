@@ -6,8 +6,8 @@ import styles from './home.module.scss';
 
 export default function Home() {
   const [items, setItems] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [query, setQuery] = useState('')
+  const [query, setQuery] = useState('');
+  const [itemsEps, setItemsEps] = useState([]);
 
   useEffect(() => {
     const api = async () => {
@@ -16,7 +16,6 @@ export default function Home() {
       )
 
       setItems(response.data);
-      setIsLoading(true);
     }
 
     api()
@@ -28,7 +27,7 @@ export default function Home() {
       <h2>Saiba tudo sobre os personagens da terceira <br /> melhor série de TV do século 21</h2>
       <Search getQuery={(q) => setQuery(q)} />
       <p>Personagens</p>
-      <Card items={items} isLoading={isLoading} />
+      <Card items={items} itemsEps={itemsEps} />
     </div>
   )
 }

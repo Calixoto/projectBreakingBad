@@ -2,11 +2,11 @@ import Items from '../Items';
 import style from './styles.module.scss';
 
 interface CardProps {
-    isLoading: boolean;
     items: any;
+    itemsEps: any;
 }
 
-export default function Card({ isLoading, items }: CardProps) {
+export default function Card({ items }: CardProps) {
     return (
         <section className={style.cardContainer}>
             {items.map((item) => ((
