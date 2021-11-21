@@ -28,3 +28,63 @@
             color: blue;
         }
 }
+
+.chaModalOverlay {
+    background: rgba(0, 0, 0, 0.5);
+    
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.charModalContent {
+    // width: 100%;
+    max-width: 576px;
+    background: white;
+    padding: 3rem;
+    position: relative;
+    border-radius: 0.25rem;
+    border: 1px solid red;
+    margin: auto;
+    
+    h1 {
+        text-align: center;
+        border-bottom: 1.7px solid black;
+        max-width: 300px;
+        margin: auto;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        
+        strong {
+            margin-top: .5rem;
+            font-size:  18px;
+            font-weight: 500;
+
+            span {
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.closeModal {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    border: 0;
+    background: transparent;
+
+    transition: 0.2s;
+
+    &:hover {
+        transform: scale(1.3);
+    }
+}
