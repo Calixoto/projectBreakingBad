@@ -1,25 +1,44 @@
 .container {
-    max-width: 1200px;
-    border: 1px solid red;
+    max-width: 1400px;
     margin: 0 auto;
     // align-items: center;
     text-align: center;
+    padding: 6rem 0;
 
     h1 {
         font-size: 4rem;
         font-weight: 600;
         margin-bottom: 3rem;
+        color: #093009;
     }
 
     h2 {
         font-size: 2rem;
         font-weight: 400;
-        margin-bottom: 5rem;
+        margin-bottom: 3rem;
+        color: #0D3E10;
     }
+
+    a {
+        padding: .5rem 2rem;
+        border: none;
+        color: white;
+        font-weight: bold;
+        border-radius: 4px;
+        background: linear-gradient(224.78deg, #369457 8.12%, #0D3E10 92.21%);
+        transition:  .7s ease;
+    }
+    
+    a:hover {
+        opacity: .8;
+    }
+
 
     p {
         font-size: 3rem;
         font-weight: 500;
         margin-bottom: 3rem;
+        color: #093009;
+
     }
 }

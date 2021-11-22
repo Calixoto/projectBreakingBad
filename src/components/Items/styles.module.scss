@@ -1,90 +1,112 @@
 .cardContent {
-        margin-top: 12px;
-        display: flex;
-        flex-direction: column;
-        width: 300px;
-        background: #C4C4C4;
-        border-radius: 1rem;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-        img {
-        border-radius: 1rem 1rem 0 0;
-        height: 380px; 
-        }
-        h3 {
-            font-size: 24px;
-            font-weight: 500;
-            margin-top: 12px;
-        }
+
+    width: 300px;
+    //background: #369457;
+    border-radius: 1rem;
+
+    transition: ease 1s;
     
-        h4 {
-            font-size: 18px;
-            font-weight: 500;
-            margin-bottom: 6px;
-        }
-    
-        a {
-            font-size: 14px;
-            font-weight: 500;
-            color: blue;
-        }
+    img {
+    border-radius: 1rem 1rem 0 0;
+    height: 380px; 
+    }
+    h3 {
+        font-size: 24px;
+        font-weight: 500;
+        margin: 12px 0;
+        
+    }
+
+    h4 {
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 12px;
+    }
+
+    button {
+        padding: 1rem 0rem;
+        font-size: 18px;
+        font-weight: 500;
+        border: none;
+        color: #032202;
+        background: #369457;
+        border-radius: 0px 0px 12px 12px;
+
+        transition: filter 0.4s;
+    }
+   button:hover {
+    filter: brightness(0.9)
+}
+}
+.cardContent:hover {
+transform: scale(1.03);
 }
 
-.chaModalOverlay {
-    background: rgba(0, 0, 0, 0.5);
-    
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.charModalOverlay {
+background: rgba(0, 0, 0, 0.5);
+
+position: fixed;
+top: 0;
+bottom: 0;
+right: 0;
+left: 0;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 .charModalContent {
-    // width: 100%;
-    max-width: 576px;
-    background: white;
-    padding: 3rem;
-    position: relative;
-    border-radius: 0.25rem;
-    border: 1px solid red;
+width: 100%;
+
+max-width: 576px;
+background: #F7FAFC;
+padding: 3rem 4rem;
+position: relative;
+border-radius: 1rem;
+
+display: flex;
+flex-direction: column;
+
+h1 {
+    text-align: center;
+    border-bottom: 1.7px solid #032202;
+    max-width: 300px;
     margin: auto;
+
+    margin-bottom: 2rem;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
     
-    h1 {
-        text-align: center;
-        border-bottom: 1.7px solid black;
-        max-width: 300px;
-        margin: auto;
-    }
+    strong {
+        margin: .7rem 0;
+        font-size:  18px;
+        font-weight: 500;
 
-    div {
-        display: flex;
-        flex-direction: column;
-        
-        strong {
-            margin-top: .5rem;
-            font-size:  18px;
-            font-weight: 500;
-
-            span {
-                font-size: 16px;
-                font-weight: 400;
-            }
+        span {
+            font-size: 16px;
+            font-weight: 400;
         }
     }
+}
 }
 
 .closeModal {
-    position: absolute;
-    right: 1.5rem;
-    top: 1.5rem;
-    border: 0;
-    background: transparent;
+position: absolute;
+right: 1.5rem;
+top: 1.5rem;
+border: 0;
+background: transparent;
 
-    transition: 0.2s;
+transition: 0.2s;
 
-    &:hover {
-        transform: scale(1.3);
-    }
+&:hover {
+    transform: scale(1.3);
+}
 }
