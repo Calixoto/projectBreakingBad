@@ -1,14 +1,24 @@
-import style from './styles.module.scss'
+import Image from "next/image";
+import Link from "next/link";
+import style from "./styles.module.scss";
 
 export default function Header() {
-    return (
-        <div className={style.containerHeader}>
-            <nav className={style.contentHeader}>
-                <div className={style.navLogo}>
-                    <img src="/images/logo.png" alt="logo" />
-                </div>
-                <div className="nav-name"><h1>Lucas Calixto</h1></div>
-            </nav>
-        </div>
-    )
+  return (
+    <header className={style.containerHeader}>
+      <Link href="/">
+        <a title="Home">
+          <Image
+            src="/images/logo.png"
+            alt="logo"
+            height={75}
+            width={75}
+            // layout="fill"
+            objectFit="contain"
+          />
+        </a>
+      </Link>
+
+      <h1>Lucas Calixto</h1>
+    </header>
+  );
 }

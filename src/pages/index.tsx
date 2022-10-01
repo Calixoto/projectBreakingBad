@@ -1,36 +1,53 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import Card from '../components/Card';
-import Header from '../components/Header';
-import Search from '../components/Search';
-import styles from './home.module.scss';
+import { GetStaticProps } from "next";
+import { useEffect, useState } from "react";
+import Dashboard from "../components/Dashboard";
+import Header from "../components/Header";
+import Search from "../components/Search";
+import { api } from "../services/api";
+import { CharactersProps } from "../types/characterType";
+import styles from "./home.module.scss";
 
-export default function Home() {
-  const [items, setItems] = useState([]);
-  const [query, setQuery] = useState('');
+interface Props {
+  characters: CharactersProps[];
+}
+
+export default function Home({ characters }: Props) {
+  const [items, setItems] = useState<CharactersProps[]>([]);
+  const [query, setQuery] = useState("");
+
+  console.log(characters);
 
   useEffect(() => {
-    const api = async () => {
-      const response = await axios(
-        `https://www.breakingbadapi.com/api/characters?name=${query}`
-      )
-
-      setItems(response.data);
-    }
-
-    api()
-  }, [query])
+    setItems(characters);
+  }, [characters]);
 
   return (
     <>
       <Header />
       <div className={styles.container}>
-        <h1>Breaking Bad <br /> 3º melhor série entre 100 no mundo</h1>
-        <h2>Saiba tudo sobre os personagens da terceira <br /> melhor série de TV do século 21</h2>
+        <h1>
+          Breaking Bad <br /> 3º melhor série entre 100 no mundo
+        </h1>
+        <h2>
+          Saiba tudo sobre os personagens da terceira <br /> melhor série de TV
+          do século 21
+        </h2>
         <Search getQuery={(q) => setQuery(q)} />
         <p>Personagens</p>
-        <Card items={items} />
+        <Dashboard items={items} />
       </div>
     </>
-  )
+  );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const characters = await api
+    .get("characters")
+    .then((response) => response.data);
+  return {
+    props: {
+      characters,
+    },
+    revalidate: 60 * 30 * 24,
+  };
+};

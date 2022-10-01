@@ -1,31 +1,22 @@
 .containerHeader {
-    width: 100%;
-    height: 5rem;
-    background-color: rgba(13, 62, 16, 0.4);
-    backdrop-filter: blur(6px);
-  
-    border-bottom: 2px solid #093009;
-  
-    transition: .5s ease;
-  
-    padding: 1rem 0rem;
-  
-    position: fixed;
-    z-index: 990;
+  position: fixed;
+  max-width: 70rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(121, 200, 123, 0.134);
+  backdrop-filter: blur(6px);
+  border-radius: 8px;
+  z-index: 1;
+
+  transition: 0.5s ease;
+
+  padding: 0.5rem 1.5rem;
+
+  a {
+    cursor: pointer;
   }
-  .contentHeader {
-    max-width: 1600px;
-    margin: auto;
-  
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  
-    .navLogo {
-      img {
-        width: 6.25rem;
-        height: auto;
-      }
-    }
-  }
-  
+}

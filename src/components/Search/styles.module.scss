@@ -1,14 +1,14 @@
-.SearchContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 3rem 0;
+.SearchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
 
-    .searchInput {
-        padding: 12px 12px 12px 19px;
-        
-        border-radius: 5px;
-        background: rgba(255,255,255,0.1);
-        border: 1px solid black;
-    }
+  .searchInput {
+    padding: 12px 19px;
+
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid black;
+  }
 }
